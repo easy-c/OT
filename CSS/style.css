@@ -591,7 +591,19 @@ body.both .hobbies img {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
 }
+/* body.both .hobbies .img-holder:hover img {
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+} */
 
 @media (min-width:768px) {
     body.both .photography .img-holder {
@@ -619,21 +631,79 @@ body.both .hobby .text {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    position: relative;
 }
 @media (max-width:320px) {
     body.both .hobby .text {
     width: 300px;
 }
 }
+body.both .hobbies .hobby .text  i {
+    z-index: 11;
+    color: white;
+    font-size: 60px;
+    top: 30px;
+    right: 30px;
+    animation: ball-rolling 1s infinite linear alternate;
+    -webkit-animation: ball-rolling 2s infinite linear ;
+}
+body.both .hobbies .hobby.photography .text  i {
+    right: auto;
+    left: 30px;
+}
+@keyframes ball-rolling {
+    100% {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+}
+}
 body.both .hobby .text .holder {
     width: 70%;
 }
+
 
 body.both .hobby .text h2 {
     text-transform: capitalize;
 }
 body.both .hobby .text p {
+    position: relative;
     text-transform: capitalize;
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;
+    padding: 30px 10px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+body.both .hobby .text p:before,
+body.both .hobby .text p:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid #eee;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+body.both .hobby .text p:after {
+    top: auto;
+    bottom: -10px;
 }
 
 /* hobbies-section */
@@ -667,8 +737,12 @@ body.eng header .container .header-btns  {
 }
 /* header */
 /* landing page */
-
 /* landing page */
+/* hobbies section */
+body.eng .hobby .text p {
+    font-family: cursive;
+}
+/* hobbies section */
 /* body (eng) */
 
 /* body (ar) */
@@ -746,6 +820,16 @@ body.ar .project .project-btns a:last-child::before {
     margin-right: 0;
 }
 /* projects-section */
+/* hobbies-section */
+body.ar .hobbies .hobby .text  i {
+    right: auto;
+    left: 30px;
+}
+body.ar .hobbies .hobby.photography .text  i {
+    left: auto;
+    right: 30px;
+}
+/* hobbies-section */
 /* main */
 /* header */
 /* body (ar) */
