@@ -117,22 +117,22 @@ body.both header .container nav .nav-icon {
 }
 }
 @media (max-width:767px) {
-    body.both header .container nav ul {
+    body.both header .container nav  ul.mainUl {
     display: none;
 }
 }
 @media (max-width:767px) {
-    body.both header .container nav .nav-icon:hover + ul {
+    body.both header .container nav .nav-icon:hover + ul.mainUl {
     display: block;
 }
 }
 @media (max-width:767px) {
-    body.both header .container nav ul:hover {
+    body.both header .container nav ul.mainUl:hover {
     display: block;
 }
 }
 
-body.both header .container ul a  {
+body.both header .container nav ul.mainUl a  {
     color: #6d6d6d;
     text-transform: uppercase;
     font-size: 14px;
@@ -144,11 +144,16 @@ body.both header .container ul a  {
     -ms-transition: .3s;
     -o-transition: .3s;
 }
-body.both header .container ul a:hover {
+@media (min-width:768px) {
+    body.both header .container nav ul.mainUl a  {
+        height: 60px;
+    }
+}
+body.both header .container nav ul.mainUl a:hover {
     color: #000000;
 }
 @media (max-width:767px) {
-    body.both header .container ul  {
+    body.both header .container nav ul.mainUl  {
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -156,17 +161,116 @@ body.both header .container ul a:hover {
         background: #eee;
         width: 100%;
     }
-    body.both header .container ul li  {
+    body.both header .container nav ul.mainUl li  {
         width: 100%;
         border-bottom: 1px solid #ccc;
     }
-    body.both header .container ul a  {
+    body.both header .container nav ul.mainUl a  {
         padding: 10px;
         width: 100%;
         display: block;
         text-align: center;
     }
 }
+
+body.both header .container .mega-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    border-bottom: none ;
+    height: 0;
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 100%;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+@media (max-width:768px) {
+    body.both header .container .mega-menu {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-height: 300px ;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+}
+body.both header .container li:hover .mega-menu {
+    border-bottom: 2px solid #2196f3 ;
+    height: 370px;
+    padding: 20px;
+}
+body.both header .container .mega-menu img {
+    display: none;
+    max-width: 450px;
+    margin: auto;
+}
+@media (min-width:992px) {
+    body.both header .container .mega-menu img {
+    display: block;
+}
+}
+body.both header .container .mega-menu ul.mega-menu-links {
+    flex-basis: 50%;
+    display: flex;
+    gap: 10px;
+}
+@media (max-width:992px) {
+    body.both header .container .mega-menu ul.mega-menu-links {
+    flex-basis: 100%;
+}
+}
+body.both header .container .mega-menu ul.mega-menu-links .links-column {
+    width: 100%;
+}
+body.both header .container .mega-menu ul.mega-menu-links li {
+    margin-bottom: 5px;
+}
+body.both header .container .mega-menu ul.mega-menu-links li a {
+    color: #888;
+    width: 100%;
+    padding: 20px 10px;
+    margin-left: 0;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+    border-bottom: 2px solid #888;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+@media (max-width:768px) {
+    body.both header .container .mega-menu ul.mega-menu-links li a {
+    padding: 10px 0px;
+    border-bottom-width: 1px;
+}
+}
+body.both header .container .mega-menu ul.mega-menu-links li a:hover {
+    background-color: #2195f352;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #2196f3;
+    border-bottom-color: #2196f3;
+}
+
 body.both header .container a.lang-change ,
 body.both header .container a.search-bar {
     width: 30px;
