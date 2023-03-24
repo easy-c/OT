@@ -116,6 +116,9 @@
 .ml-auto {
     margin-left: auto;
 }
+.ml-10 {
+    margin-left: 10px;
+}
 /* padding + margin ... */
 /* box model */
 .d-none {

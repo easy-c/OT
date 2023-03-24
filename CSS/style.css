@@ -242,9 +242,12 @@ body.both header .container .mega-menu ul.mega-menu-links li {
 }
 body.both header .container .mega-menu ul.mega-menu-links li a {
     color: #888;
+    background-color: #8888883f;
+    border-radius: 10px;
     width: 100%;
     padding: 20px 10px;
     margin-left: 0;
+    margin-right: 0;
     transition: .6s;
     -webkit-transition: .6s;
     -moz-transition: .6s;
@@ -253,6 +256,10 @@ body.both header .container .mega-menu ul.mega-menu-links li a {
     border-bottom: 2px solid #888;
     font-weight: 600;
     text-transform: capitalize;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 @media (max-width:768px) {
     body.both header .container .mega-menu ul.mega-menu-links li a {
@@ -262,11 +269,6 @@ body.both header .container .mega-menu ul.mega-menu-links li a {
 }
 body.both header .container .mega-menu ul.mega-menu-links li a:hover {
     background-color: #2195f352;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     color: #2196f3;
     border-bottom-color: #2196f3;
 }
