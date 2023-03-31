@@ -281,6 +281,9 @@
 .full-h {
     height: 100%;
 }
+.h-screen {
+    height: 100vh;
+}
 
 /* width + height */
 /* position */

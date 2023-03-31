@@ -981,9 +981,59 @@ body.both .skills .cards .card .circular-bar span {
     font-size: 21px;
     font-weight: 700;
 }
-
-
 /* skills-section */
+/* video-section */
+section.video {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section.video::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000088;
+}
+section.video video {
+    margin-top: -200px;
+}
+section.video .content {
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1000;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    text-align: center;
+}
+section.video .content p {
+    width: 100%;
+    padding: 10px;
+    background-color: #0075ff;
+    color: white;
+    font-size: 40px;
+}
+section.video .content span {
+    color: white;
+}
+section.video .content span:last-child {
+    background-color: #f44336;
+    padding: 0px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+/* video-section */
 /* main */
 /* body (both) */
 
@@ -1020,6 +1070,13 @@ body.eng .hobby .text p {
     font-family: cursive;
 }
 /* hobbies section */
+/* video-section */
+body.eng section.video .content p {
+    font-family: monospace;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+/* video-section */
 /* body (eng) */
 
 /* body (ar) */
@@ -1108,7 +1165,6 @@ body.ar .hobbies .hobby.photography .text  i {
 }
 /* hobbies-section */
 /* main */
-/* header */
 /* body (ar) */
 
 
