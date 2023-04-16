@@ -1,9 +1,9 @@
 
 /* variables */
 :root {
-    --main-color: #94e5ff ; 
-    --main-alt-color: #4fcaf3 ; 
-    --color-first-blue: #2196f3;
+    --main-color: #2196f3 ; 
+    --main-alt-color: #01070c ; 
+    --color-first-blue: #94e5ff;
     --secondly1-color: #94ffae ; 
     --secondly1-a-color: #94ffafa1 ; 
     --secondly2-color: #ffae94 ; 
@@ -13,6 +13,8 @@
     --p-color: #888;
     --eee-color: #eee;
     --ccc-color: #ccc;
+    /* BOX SHADOW */
+    --main-box-shadow: 0 0 10px #d5d5d5, 0 0 5px rgba(0, 0, 0, 0.07);
 }
 
 /* global rules */
@@ -406,7 +408,7 @@ body.both .landing-page .simple-info .simple-intro .name h1 {
     }
 }
 body.both .landing-page .simple-info .simple-intro .domain {
-    background-color: var(--main-color);
+    background-color: var(--color-first-blue);
     color: white;
     width: fit-content;
     margin-left: auto;
@@ -689,14 +691,21 @@ main {
     content: "";
 }
 .projects a.projects-more-btn {
-    background-color: var(--secondly2-color);
+    background-color: white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
     margin-top: 30px;
-    color: white;
     padding: 5px 30px;
     text-transform: uppercase;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
 .projects a.projects-more-btn:hover {
-    background-color: var(--secondly2-alt-color);
+    background-color: var(--main-color);
+    color: white;
 }
 /* projects-section */
 /* hobbies-section */
@@ -912,6 +921,11 @@ body.both .skills .cards .card {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    box-shadow: var(--main-box-shadow);
+
+}
+body.both .skills .cards .card img {
+    width: 30px;
 }
 body.both .skills .cards .card i {
     right: 10px;
@@ -1016,7 +1030,7 @@ section.video .content {
 section.video .content p {
     width: 100%;
     padding: 10px;
-    background-color: #0075ff;
+    background-color: var(--main-color);
     color: white;
     font-size: 40px;
     line-height: 1.7;
@@ -1080,7 +1094,7 @@ body.both .services-holder .service-wedget:after {
     height: 3px;
     width: 0%;
     left: 50%;
-    background-color: var(--color-first-blue);
+    background-color: var(--main-color);
     top: 0;
     transition: .3s;
     -webkit-transition: .3s;
@@ -1103,7 +1117,7 @@ body.both .services-holder .service-wedget i {
     margin-bottom: 20px;
 }
 body.both .services-holder .service-wedget h2 {
-    color: var(--color-first-blue);
+    color: var(--main-color);
     text-transform: capitalize;
     line-height: 1;
 }
@@ -1114,7 +1128,7 @@ body.both .services-holder .service-wedget a.ser-details {
     width: 100%;
     padding: 10px;
     background-color: #f9f9f9;
-    color: var(--color-first-blue);
+    color: var(--main-color);
 }
 body.both .services-holder .service-wedget a.ser-details::before,
 body.both .services-holder .service-wedget a.ser-details::after {
@@ -1125,7 +1139,7 @@ body.both .services-holder .service-wedget a.ser-details::after {
 body.both .services-holder .service-wedget a.ser-details::before {
     content: "0" counter(ser-counter);
     left: 0;
-    background-color: var(--color-first-blue);
+    background-color: var(--main-color);
     width: 30%;
     color: white;
     display: flex;
@@ -1146,6 +1160,52 @@ body.both .services-holder .service-wedget a.ser-details::after {
 }
 
 /* services-section */
+/* about-section */
+body.both section.about .about-bg {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url(../IMGS/about-me.jpg);
+    /* background-size: contain; */
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+body.both section.about .about-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, black 60%);
+}
+body.both section.about .about-bg .content {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+}
+body.both section.about .about-bg .content p {
+    color: white;
+    text-align: justify;
+}
+body.both section.about .about-bg .content a.about-btn {
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+/* body.both section.about .about-bg .content a.about-btn:hover {
+    color: red;
+} */
+
+/* about-section */
 a.goUp {
     position: fixed;
     left: 15px;
@@ -1315,6 +1375,25 @@ body.ar .hobbies .hobby.photography .text  i {
     right: 30px;
 }
 /* hobbies-section */
+/* services-section */
+body.ar .services-holder .service-wedget a.ser-details {
+    text-align: start;
+}
+/* services-section */
+/* about-section */
+body.ar section.about .about-bg {
+    padding-left: 50px;
+}
+body.ar section.about .about-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, transparent, black 60%);
+}
+/* about-section */
 body.ar a.goUp {
     position: fixed;
     left: auto;
