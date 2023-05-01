@@ -400,6 +400,9 @@
 .txt-center {
     text-align: center;
 }
+.u-line {
+    text-decoration: underline;
+}
 /* font */
 /* other */
 @media (max-width:767px) {
