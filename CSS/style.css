@@ -1230,26 +1230,56 @@ body.both section.about .about-bg::after {
 body.both section.about .about-bg .content {
   position: relative;
   z-index: 1;
-  width: 40%;
+  width: 50%;
 }
 @media (max-width: 767px) {
   body.both section.about .about-bg .content {
     width: 100%;
   }
 }
+
 body.both section.about .about-bg .content p {
+  position: relative;
   color: white;
   text-align: justify;
-  font-size: 20px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+body.both section.about .about-bg .content p a {
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+body.both section.about .about-bg .content p a:hover {
+  text-decoration: underline;
+}
+
+body.both section.about .about-bg .content p::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
 }
 @media (max-width: 320px) {
   body.both section.about .about-bg .content p {
     font-size: 14px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  body.both section.about .about-bg .content p {
+    text-align: center;
   }
 }
 body.both section.about .about-bg .content a.about-btn {
-  display: block;
-  width: fit-content;
+  /* display: block; */
+  font-size: 20px;
+  /* width: fit-content; */
   text-transform: uppercase;
   transition: 0.6s;
   -webkit-transition: 0.6s;
@@ -1257,6 +1287,34 @@ body.both section.about .about-bg .content a.about-btn {
   -ms-transition: 0.6s;
   -o-transition: 0.6s;
 }
+@media (max-width: 320px) {
+  body.both section.about .about-bg .content a.about-btn {
+    font-size: 14px;
+  }
+}
+body.both section.about .about-bg .content a.about-btn:hover i {
+  animation: aboutReadMore 0.6s linear infinite;
+  -webkit-animation: aboutReadMore 0.6s linear infinite;
+}
+
+@keyframes aboutReadMore {
+  0%,
+  100% {
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+  }
+}
+
 /* body.both section.about .about-bg .content a.about-btn:hover {
     color: red;
 } */
@@ -1271,12 +1329,12 @@ a.goUp {
 }
 a.goUp i {
   color: white;
-  /* font-size: 15px;
+  font-size: 15px;
   width: 25px;
   height: 25px;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   background-color: #000000;
   padding: 3px;
   border: 1px solid white;
@@ -1288,6 +1346,11 @@ a.goUp i {
 }
 a.goUp span {
   display: none;
+  width: max-content;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -1301,9 +1364,13 @@ a.goUp span {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 a.goUp:hover span {
-  display: inline;
+  display: block;
 }
 /* main */
 /* body (both) */
