@@ -1094,7 +1094,8 @@ body.both .services-holder {
     padding-right: 0;
   }
 }
-body.both .services .sec-title:after {
+body.both .services .sec-title:after,
+body.both .contact .sec-title:after {
   border-color: #eee;
 }
 body.both .services-holder .service-wedget {
@@ -1324,6 +1325,97 @@ body.both section.about .about-bg .content a.about-btn:hover i {
 } */
 
 /* about-section */
+/* contact-section */
+section.contact .container {
+  justify-content: space-between;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  box-shadow: var(--main-box-shadow);
+}
+section.contact form.contact-area {
+  /* margin: auto; */
+  width: 45%;
+}
+section.contact form.contact-area *:not(label span) {
+  display: block;
+  margin-bottom: 10px;
+}
+section.contact form.contact-area label {
+  margin-bottom: 5px !important;
+}
+section.contact form.contact-area input,
+section.contact form.contact-area textarea {
+  resize: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: var(--main-box-shadow);
+}
+section.contact form.contact-area textarea {
+  height: 100px;
+  padding-top: 10px;
+}
+section.contact div.orContact {
+  position: relative;
+  width: 45%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+section.contact div.orContact h1 {
+  color: var(--main-color);
+}
+section.contact div.orContact::before,
+section.contact div.orContact::after {
+  content: "";
+  position: absolute;
+  left: -50px;
+}
+section.contact div.orContact::before {
+  top: 0;
+  width: 1px;
+  height: 100%;
+  /* background-color: #01070c; */
+  background-color: var(--main-color);
+}
+section.contact div.orContact::after {
+  content: "Or";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: calc(-50px + -11px);
+  transform: translateY(-50%);
+  background-color: #ddd;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  outline: 5px solid #ddd;
+}
+/* contact-section */
+/* GO UP BTN*/
 a.goUp {
   position: fixed;
   left: 15px;
@@ -1526,6 +1618,23 @@ body.ar section.about .about-bg::after {
   background-image: linear-gradient(to left, transparent, black 60%);
 }
 /* about-section */
+/* contact-section */
+section.contact form.contact-area input,
+section.contact form.contact-area textarea {
+  padding-right: 20px;
+}
+body.ar section.contact div.orContact::before,
+body.ar section.contact div.orContact::after {
+  left: -50px;
+  right: -50px;
+}
+body.ar section.contact div.orContact::after {
+  content: "أو";
+  right: calc(-50px + -10px);
+}
+/* contact-section */
+
+/* GO UP BTN */
 body.ar a.goUp {
   position: fixed;
   left: auto;

@@ -131,6 +131,9 @@
 .ml-auto {
   margin-left: auto;
 }
+.ml- {
+  margin-left: 5px;
+}
 .ml-10 {
   margin-left: 10px;
 }
@@ -222,6 +225,9 @@
 }
 .bg-eee {
   background-color: #eee;
+}
+.bg-ddd {
+  background-color: #ddd;
 }
 .bg-blue {
   background-color: #0075ff;
@@ -396,6 +402,9 @@
 }
 .fw-900 {
   font-weight: 900;
+}
+.text-lower {
+  text-transform: lowercase;
 }
 .text-capa {
   text-transform: capitalize;
