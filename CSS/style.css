@@ -64,6 +64,11 @@ textarea {
 
 body {
   font-family: "Cairo", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
 }
 
 .container {
@@ -316,12 +321,12 @@ a.search-bar:hover {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.781);
+  background-color: rgba(0, 0, 0, 0.881);
   z-index: 9999999;
 }
 .search-page i#cancle-btn {
   color: white;
-  left: 30px;
+  right: 30px;
   top: 30px;
   font-size: 40px;
   transition: .3s ease;
@@ -333,6 +338,41 @@ a.search-bar:hover {
 }
 .search-page i#cancle-btn:hover {
   color: #f44336;
+}
+.search-page input  {
+  width: 50%;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-right: 20px;
+}
+.search-page button  {
+  height: 60px;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  padding: 0 30px;
+  background-color: var(--main-color);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  border: none;
+  color: white;
+}
+.search-page button:hover {
+  background-color: green;
 }
 /* header */
 /* landing */
@@ -1721,6 +1761,22 @@ body.eng section.video .content p {
 /* body (eng) */
 
 /* body (ar) */
+body.ar input,
+body.ar input::placeholder,
+body.ar textarea,
+body.ar textarea::placeholder {
+  font-family: "Cairo", sans-serif;
+}
+
+body.ar .search-page i#cancle-btn {
+  right: auto;
+  left: 30px;
+}
+body.ar .search-page input  {
+  padding-right: 20px;
+  margin-left: 20px;
+}
+
 /* header */
 body.ar header .container a.logo {
   margin-left: auto;
