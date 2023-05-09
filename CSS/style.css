@@ -324,6 +324,11 @@ a.search-bar:hover {
   background-color: rgba(0, 0, 0, 0.881);
   z-index: 9999999;
 }
+@media (max-width: 425px){
+  .search-page {
+    flex-direction: column;
+  }
+}
 .search-page i#cancle-btn {
   color: white;
   right: 30px;
@@ -339,11 +344,23 @@ a.search-bar:hover {
 .search-page i#cancle-btn:hover {
   color: #f44336;
 }
+.search-page h1  {
+  top: 100px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 425px){
+  .search-page h1  {
+    font-size: 30px;
+  }
+}
 .search-page input  {
   width: 50%;
   height: 60px;
   font-size: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
   border: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -351,6 +368,12 @@ a.search-bar:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   margin-right: 20px;
+}
+@media (max-width: 425px){
+  .search-page input {
+    margin-bottom: 20px;
+    width: 70%;
+  }
 }
 .search-page button  {
   height: 60px;
@@ -370,6 +393,11 @@ a.search-bar:hover {
   -o-transition: .3s ease;
   border: none;
   color: white;
+}
+@media (max-width: 425px){
+  .search-page button {
+    width: 70%;
+  }
 }
 .search-page button:hover {
   background-color: green;
@@ -1719,6 +1747,11 @@ footer a.search-bar:hover {
 /* body (both) */
 
 /* body (eng) */
+@media (max-width: 425px){
+  body.eng .search-page input {
+    margin-right: 0;
+  }
+}
 /* header */
 body.eng header .container a.logo {
   margin-right: auto;
@@ -1772,8 +1805,10 @@ body.ar .search-page i#cancle-btn {
   right: auto;
   left: 30px;
 }
+body.ar .search-page h1  {
+  top: 180px;
+}
 body.ar .search-page input  {
-  padding-right: 20px;
   margin-left: 20px;
 }
 
