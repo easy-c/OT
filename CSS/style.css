@@ -296,6 +296,7 @@ a.search-bar {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  cursor: pointer;
 }
 a.lang-change {
   margin-left: 10px;
@@ -304,6 +305,34 @@ a.lang-change:hover,
 a.search-bar:hover {
   color: white;
   background-color: #000000;
+}
+
+.search-page {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.781);
+  z-index: 9999999;
+}
+.search-page i#cancle-btn {
+  color: white;
+  left: 30px;
+  top: 30px;
+  font-size: 40px;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  cursor: pointer;
+}
+.search-page i#cancle-btn:hover {
+  color: #f44336;
 }
 /* header */
 /* landing */
