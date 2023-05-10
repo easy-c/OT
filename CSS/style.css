@@ -749,6 +749,7 @@ body.both .landing-page a.menu-angles i {
   background-repeat: repeat;
   background-position: center;
   background-attachment: revert;
+  counter-increment: project-sort;
 }
 
 .project:after {
@@ -809,10 +810,52 @@ body.both .landing-page a.menu-angles i {
   content: "\f002";
 }
 .project:hover .project-title {
-  top: 50px;
+  top: 100px;
+}
+.project{
+  counter-increment: project-sort;
+}
+.project .project-title h2 {
+  text-transform: uppercase;
+}
+.project .project-title h2::before {
+  content: "0"counter(project-sort);
+  position: absolute;
+  top: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border: 2px solid ;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-size: 15px;
 }
 .project:hover .project-btns {
   bottom: 50px;
+}
+.project .project-btns * {
+  transition: .3s linear;
+  -webkit-transition: .3s linear;
+  -moz-transition: .3s linear;
+  -ms-transition: .3s linear;
+  -o-transition: .3s linear;
+}
+.project .project-btns .info:hover {
+  background-color: green;
+}
+.project .project-btns .preview:hover {
+  background-color: darkblue;
 }
 .project:hover:after {
   content: "";
