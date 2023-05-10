@@ -745,6 +745,10 @@ body.both .landing-page a.menu-angles i {
   -ms-transform: 0.3s;
   -o-transform: 0.3s;
   cursor: pointer;
+  background-color: #d9d9d9;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: revert;
 }
 
 .project:after {
