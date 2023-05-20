@@ -851,11 +851,9 @@ body.both .landing-page a.menu-angles i {
   -ms-transition: .3s linear;
   -o-transition: .3s linear;
 }
-.project .project-btns .info:hover {
-  background-color: green;
-}
+.project .project-btns .info:hover,
 .project .project-btns .preview:hover {
-  background-color: darkblue;
+  background-color: black;
 }
 .project:hover:after {
   content: "";
@@ -876,6 +874,73 @@ body.both .landing-page a.menu-angles i {
   background-color: black;
   color: white;
 }
+body.leon-page .back{
+  font-size: 30px;
+  left: 40px;
+  top: 30px;
+  cursor: pointer;
+}
+body.leon-page .container .content img {
+  width: 50%;
+  margin-right: 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  align-self: flex-start;
+}
+
+body.leon-page .container .content .info {
+  width: 40%;
+}
+body.leon-page .container .content .info h2 {
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-weight: 400;
+
+}
+body.leon-page .container .content .info h2 span {
+  color: #999;
+  margin-left: 10px;
+}
+@media (max-width: 767px){
+  body.leon-page .container .content {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  body.leon-page .container .content img {
+    margin-bottom: 20px;
+  }
+  body.leon-page .container .content img,
+  body.leon-page .container .content .info {
+    width: 100%;
+  }
+  body.leon-page .container .content .info h2 span{
+    display: block;
+    font-size: 20px;
+  }
+  body.leon-page .container .content .info a{
+    margin: 20px auto;
+  }
+}
+/* ar */
+  body.leon-page-ar .container .content img {
+    margin-right: auto;
+    margin-left: 30px;
+  }
+  body.leon-page-ar .back{
+  right: 40px;
+  left: auto;
+  rotate: 180deg;
+}
+body.leon-page-ar .container .content .info h2 span {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
 /* projects-section */
 /* hobbies-section */
 @media (max-width: 320px) {
