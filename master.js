@@ -17,13 +17,25 @@ document.addEventListener("click", function (event) {
     if (event.target.matches("#seeMore")) {
     const hiddenItemList = document.querySelectorAll(".hiddenItem");
     hiddenItemList.forEach(function (hiddenItem) {
-        if (hiddenItem.style.display === "none") {
-        hiddenItem.style.display = "block";
-        event.target.textContent = "SEE LESS";
-        } else {
-        hiddenItem.style.display = "none";
-        event.target.textContent = "SEE MORE";
+        if(document.body.className === "both eng"){
+            if (hiddenItem.style.display === "none") {
+                hiddenItem.style.display = "block";
+                event.target.textContent = "See Less";
+                } else {
+                hiddenItem.style.display = "none";
+                event.target.textContent = "See More";
+                }
         }
+        if(document.body.className === "both ar"){
+            if (hiddenItem.style.display === "none") {
+                hiddenItem.style.display = "block";
+                event.target.textContent = "شاهد أقل";
+                } else {
+                hiddenItem.style.display = "none";
+                event.target.textContent = "شاهد أكثر";
+                }
+        }
+        
     });
     }
 
